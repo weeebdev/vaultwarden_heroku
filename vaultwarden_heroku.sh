@@ -105,6 +105,11 @@ function build_image {
         heroku config:set _ENABLE_DUO=true -a "${APP_NAME}"
     fi
 
+    if [ "${I_REALLY_WANT_VOLATILE_STORAGE}" -eq "true"]
+    then
+        heroku config:set I_REALLY_WANT_VOLATILE_STORAGE=true -a "${APP_NAME}"
+    fi
+
     echo "Logging into Heroku Container Registry to push the image (this will add an entry in your Docker config)"
     heroku container:login
 
