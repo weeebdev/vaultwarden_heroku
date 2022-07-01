@@ -12,6 +12,7 @@ USE_PSQL=0
 HEROKU_VERIFIED=0
 OFFSITE_HEROKU_DB=" "
 STRATEGY_TYPE="deploy"
+I_REALLY_WANT_VOLATILE_STORAGE=true
 
 # Clean out any existing contents
 rm -rf ./${VAULTWARDEN_FOLDER}
